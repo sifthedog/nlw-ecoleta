@@ -3,7 +3,6 @@ import knex from '../database/connection';
 
 class PointsController {
     async index(request: Request, response: Response) {
-        console.log("QUERY JOÃO", request.query)
         const { city, uf, items } = request.query;
         const parsedItems = String(items)
             .split(',')
